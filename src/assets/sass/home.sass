@@ -1,0 +1,97 @@
+@import 'vars'
+  
+.homePageWrapper
+  h2
+    font-family: 'GT Super Display'
+    font-weight: 900
+    font-size: 80px
+    text-align: center
+    margin: 0
+    padding: 0
+
+.directorListWrapper
+  padding: 32px 64px
+  max-width: 1200px
+  margin: 0 auto
+  @media #{ $gt-cinema }
+    max-width: 1800px
+  @media #{ $lt-phone }
+    padding: 32px 0
+
+.directorList
+  display: flex
+  flex-flow: row wrap
+  list-style: none
+  padding: 0
+  margin: 0
+  &__item
+    flex: 0 1 auto
+    width: 50%
+    height: 250px
+    padding: 0
+    margin: 0
+    background-color: silver
+    background-position: center
+    background-size: cover
+    background-repeat: no-repeat
+    @media #{ $gt-cinema }
+      width: calc(100% / 3)
+    @media #{ $lt-phone }
+      width: 100%
+    &__name
+      display: flex
+      height: 100%
+      padding: 16px
+      align-items: center
+      justify-content: center
+      text-decoration: none
+      color: white
+      text-align: center
+      font-family: 'GT Super Display'
+      font-weight: 600
+      font-size: 40px
+      background-color: rgba(0,0,0,0)
+      transition: background-color 0.4s
+      &:hover
+        background-color: rgba(0,0,0,0.3)
+        transition: background-color 0.2s
+
+.anderson-wright
+  background-image: url('../assets/img/anderson-wright.jpg')
+  @media #{ $screen-2x }
+    background-image: url('../assets/img/anderson-wright_2x.jpg')
+
+.anthony-leonardi
+  background-image: url('../assets/img/anthony-leonardi.jpg')
+  @media #{ $screen-2x }
+    background-image: url('../assets/img/anthony-leonardi_2x.jpg')
+
+.saam-farahmand
+  background-image: url('../assets/img/saam-farahmand.jpg')
+  @media #{ $screen-2x }
+    background-image: url('../assets/img/saam-farahmand_2x.jpg')
+
+.drake-doremus
+  background-image: url('../assets/img/drake-doremus.jpg')
+  @media #{ $screen-2x }
+    background-image: url('../assets/img/drake-doremus_2x.jpg')
+
+.justin-lin
+  background-image: url('../assets/img/justin-lin.jpg')
+  @media #{ $screen-2x }
+    background-image: url('../assets/img/justin-lin_2x.jpg')
+
+.larry-charles
+  background-image: url('../assets/img/larry-charles.jpg')
+  @media #{ $screen-2x }
+    background-image: url('../assets/img/larry-charles_2x.jpg')
+
+.matt-ogens
+  background-image: url('../assets/img/matt-ogens.jpg')
+  @media #{ $screen-2x }
+    background-image: url('../assets/img/matt-ogens_2x.jpg')
+    
+.peyton-wilson
+  background-image: url('../assets/img/peyton-wilson.jpg')
+  @media #{ $screen-2x }
+    background-image: url('../assets/img/peyton-wilson_2x.jpg')

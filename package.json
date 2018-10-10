@@ -1,0 +1,29 @@
+{
+  "name": "noise",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "ctrlaltdev <yorick@ctrlaltdev.xyz>",
+  "license": "MPL-2.0",
+  "private": false,
+  "scripts": {
+    "postinstall": "npm run build",
+    "start": "npx serve -s dist",
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build"
+  },
+  "dependencies": {
+    "dotenv": "^6.1.0",
+    "twitter-lite": "^0.7.0",
+    "vue": "^2.5.17",
+    "vuex": "^3.0.1"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.0.4",
+    "@vue/cli-service": "^3.0.4",
+    "node-sass": "^4.9.0",
+    "pug": "^2.0.3",
+    "pug-plain-loader": "^1.0.0",
+    "sass-loader": "^7.0.1",
+    "vue-template-compiler": "^2.5.17"
+  }
+}
