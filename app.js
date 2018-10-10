@@ -38,9 +38,7 @@ app.get('/api/tweets', function(req, res, next) {
         title: 'New tweet',
         data,
         timestamp: new Date() 
-        })
-      res.write(`event: tweet\n`)
-      res.write(`data: ${JSON.stringify(data)}\n\n`)
+      })
     })
     .on("ping", () => console.info("ping"))
     .on("error", error => {
@@ -59,7 +57,7 @@ app.get('/api/tweets', function(req, res, next) {
 
   setTimeout(() => {
     client.stream.destroy()
-  }, 5000)
+  }, 8000)
 })
 
 app.use(serveStatic(__dirname + "/dist"))
