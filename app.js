@@ -34,30 +34,15 @@ app.get('/api/tweets', function(req, res, next) {
   })
   client.stream("statuses/filter", parameters)
     .on("data", data => {
-      app.emit('message', { 
-        title: 'New tweet',
-        data,
-        timestamp: new Date() 
-      })
+      res.write(`event: message\n`)
+      res.write(`data: ${JSON.stringify(data)}\n\n`)
     })
     .on("ping", () => console.info("ping"))
-    .on("error", error => {
-      client.stream.destroy()
-      console.error("error", error)
-    })
+    .on("error", error => console.error("error", error))
     .on("end", () => {
       client.stream.destroy()
       res.end()
     })
-
-    app.on('message', data => {
-      res.write(`event: message\n`);
-      res.write(`data: ${JSON.stringify(data)}\n\n`);
-    })
-
-  setTimeout(() => {
-    client.stream.destroy()
-  }, 8000)
 })
 
 app.use(serveStatic(__dirname + "/dist"))
